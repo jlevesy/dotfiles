@@ -1,0 +1,47 @@
+export ZSH=/usr/share/oh-my-zsh
+ZSH_THEME="hypercontent"
+plugins=(git archlinux systemd docker golang kubectl aws)
+
+export EDITOR=nvim
+export VISUAL=nvim
+
+export GPG_TTY=$(tty)
+
+export GOPATH=$HOME/Code
+export GOBIN=$GOPATH/bin
+export GO111MODULES=on
+
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+export npm_config_prefix=~/.node_modules
+
+export PATH="$HOME/.npm/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
+
+source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+[[ -r "/bin/rbenv" ]] && eval "$(rbenv init -)"
+
+alias vi=nvim
+alias vim=nvim
+alias sl=ls
+alias b="hub browse"
+alias laptop="xrandr --output DP-3-1 --off --output DP-3-2 --off"
+alias reredshift="systemctl --user restart redshift"
+alias open="xdg-open"
+alias ip='ip --color'
+alias ipb='ip --color --brief'
+alias ls='lsd -a1l'
+alias cat=bat
+
+if [ -e ~/.specific.zshrc ]; then
+  source ~/.specific.zshrc
+fi

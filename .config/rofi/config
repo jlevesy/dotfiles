@@ -1,0 +1,3 @@
+rofi.theme: /usr/share/rofi/themes/gruvbox-dark.rasi
+rofi.combi-modi: window,drun
+rofi.modi: combi

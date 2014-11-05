@@ -1,0 +1,1 @@
+/home/jlevesy/.local/share/nvim/plugged/gruvbox/colors/gruvbox.vim

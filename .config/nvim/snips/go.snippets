@@ -1,0 +1,41 @@
+# Snippets
+
+extends go
+
+# error format
+snippet errf "Error with errorf formating" !b
+if err != nil {
+	return fmt.Errorf("unable to ${0}: %v", err)
+}
+endsnippet
+
+snippet tdt "table-driven tests using subtests"
+func Test${1:Func}(t *testing.T) {
+	testCases := []struct {
+		desc string
+	}{
+	}
+
+	for _, test := range testCases {
+		t.Run(test.desc, func(t *testing.T) {
+		})
+	}
+}
+endsnippet
+
+snippet tdtm "table-driven tests using map defined subtests"
+func Test${1:Func}(t *testing.T) {
+	testCases := map[string]struct {
+		desc string
+	}{
+	}
+
+	for desc, test := range testCases {
+		t.Run(desc, func(t *testing.T) {
+		})
+	}
+}
+endsnippet
+
+
+# vim:ft=snippets:
