@@ -46,3 +46,16 @@ Bundle 'marijnh/tern_for_vim'
 
 "Whitespace handling
 Bundle 'bronson/vim-trailing-whitespace'
+
+"Git
+Bundle 'tpope/vim-fugitive'
+
+:nnoremap <leader>gb :Gblame<CR>
+:nnoremap <leader>gs :Gstatus<CR>
+:nnoremap <leader>gd :Gdiff<CR>
+:nnoremap <leader>gl :Glog<CR>
+:nnoremap <leader>gc :Gcommit<CR>
+:nnoremap <leader>gp :Git push<CR>
+
+"BufferGator
+Bundle 'jeetsukumaran/vim-buffergator'
