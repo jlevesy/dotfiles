@@ -9,9 +9,18 @@ source $HOME/.bundles.vim
 
 "Colors
 set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+
 syntax on
 set background=dark
 colorscheme jellybeans
+
+"Font management
+if has("gui_running")
+  if has("darwin")
+    set guifont=Monaco\ for\ Powerline:h12
+  endif
+endif
 
 "Indentation with spaces only
 "1 tab = v spaces
@@ -35,8 +44,8 @@ let localleader=",,"
 "Indent Whole file
 :nnoremap <leader>i gg=G<cr>
 
-"Layout
-:nnoremap <leader>t :NERDTreeToggle<cr>
+"NerdTree
+:nnoremap <leader>n :NERDTreeToggle<cr>
 
 "vim conf editing
 " edit vim (ev)

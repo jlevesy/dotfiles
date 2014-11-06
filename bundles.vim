@@ -59,3 +59,9 @@ Bundle 'tpope/vim-fugitive'
 
 "BufferGator
 Bundle 'jeetsukumaran/vim-buffergator'
+
+"AirLine
+Bundle 'bling/vim-airline'
+set laststatus=2
+let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
