@@ -59,9 +59,16 @@ Bundle 'tpope/vim-fugitive'
 
 "BufferGator
 Bundle 'jeetsukumaran/vim-buffergator'
-
+:nnoremap <C-b>:BuffergatorToggle
 "AirLine
 Bundle 'bling/vim-airline'
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
+
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'skalnik/vim-vroom'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'ekalinin/dockerfile.vim'
+Bundle 'mustache/vim-mustache-handlebars'
+let g:mustache_abbreviations = 1

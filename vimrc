@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype on " required
 
 filetype indent on
 filetype plugin on
@@ -11,16 +11,11 @@ source $HOME/.bundles.vim
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 
-syntax on
 set background=dark
 colorscheme jellybeans
 
 "Font management
-if has("gui_running")
-  if has("darwin")
-    set guifont=Monaco\ for\ Powerline:h12
-  endif
-endif
+set guifont=Monaco\ for\ Powerline:h12
 
 "Indentation with spaces only
 "1 tab = v spaces
@@ -54,3 +49,10 @@ let localleader=",,"
 :nnoremap <leader>eb :vsplit ~/.bundles.vim<cr>
 " reload conf
 :nnoremap <leader>rc :source $MYVIMRC<cr>
+
+:match ErrorMsg '\%>80v.\+'
+
+" doh, force to reload filetype
+filetype off
+filetype on
+syntax enable

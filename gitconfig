@@ -23,8 +23,10 @@
 	color = true
 [core]
 	whitespace = trailing-space,space-before-tab,tab-in-indent
-	editor = /usr/bin/vim
+	editor = vim
 [push]
 	default = simple
 [rerere]
 	enabled = true
+[grep]
+	lineNumber = true
