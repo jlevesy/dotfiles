@@ -1,4 +1,4 @@
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 "github based bundles
@@ -72,3 +72,4 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ekalinin/dockerfile.vim'
 Bundle 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1
+Bundle 'solarnz/thrift.vim'

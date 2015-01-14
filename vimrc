@@ -14,9 +14,6 @@ set fillchars+=stl:\ ,stlnc:\
 set background=dark
 colorscheme jellybeans
 
-"Font management
-set guifont=Monaco\ for\ Powerline:h12
-
 "Indentation with spaces only
 "1 tab = v spaces
 set expandtab

@@ -30,3 +30,5 @@
 	enabled = true
 [grep]
 	lineNumber = true
+[merge]
+	tool = meld

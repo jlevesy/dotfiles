@@ -45,7 +45,7 @@ ZSH_THEME="af-magic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew rails ruby rvm)
+plugins=(git rails ruby rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -73,8 +73,10 @@ function git_prompt_info() {
     echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
 alias fleetclv=fleetctl --tunnel 127.0.0.1:2222
+alias vi=vim
 
-source /Users/jlevesy/.rvm/scripts/rvm
+source /home/jlevesy/.rvm/scripts/rvm
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/bin"
