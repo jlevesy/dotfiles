@@ -23,6 +23,10 @@ set softtabstop=2
 set number
 set ruler
 
+"Line of death
+set textwidth=80
+set colorcolumn=+1
+
 "Leader and localleader setup
 let mapleader=","
 let localleader=",,"

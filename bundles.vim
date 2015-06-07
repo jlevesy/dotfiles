@@ -15,7 +15,14 @@ Bundle 'Raimondi/delimitMate'
 "Syntax checker
 Bundle 'scrooloose/syntastic'
 " Enable it on file open
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq  = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height=5
+let g:syntastic_ruby_checkers=['rubocop']
+let g:syntastic_ruby_rubocop_exec='~/bin/rubocop-wrapper'
+let g:syntastic_python_checkers=['pep8']
 
 "NERDTree
 Bundle 'scrooloose/nerdtree'
@@ -73,3 +80,4 @@ Bundle 'ekalinin/dockerfile.vim'
 Bundle 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1
 Bundle 'solarnz/thrift.vim'
+Bundle 'rking/ag.vim'

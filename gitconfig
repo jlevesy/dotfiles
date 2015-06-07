@@ -27,7 +27,7 @@
 [push]
 	default = simple
 [rerere]
-	enabled = true
+	enabled = false
 [grep]
 	lineNumber = true
 [merge]
