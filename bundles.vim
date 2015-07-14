@@ -81,3 +81,5 @@ Bundle 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1
 Bundle 'solarnz/thrift.vim'
 Bundle 'rking/ag.vim'
+Bundle 'Matt-Deacalion/vim-systemd-syntax'
+Bundle 'fatih/vim-go'
