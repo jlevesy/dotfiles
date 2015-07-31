@@ -8,6 +8,9 @@ Bundle 'gmarik/vundle'
 
 "Indent guides
 Bundle 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_auto_colors=0
+hi IndentGuidesOdd  guibg=red   ctermbg=3
+hi IndentGuidesEven guibg=green ctermbg=4
 
 "Automatic closing curly, brackets, tag... whatever needs to be closed
 Bundle 'Raimondi/delimitMate'
