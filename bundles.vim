@@ -44,6 +44,8 @@ set completeopt-=preview
 
 " CtrlP
 Bundle 'kien/ctrlp.vim'
+set wildignore+=*/bower_components/*,*/dist/*,*/node_modules/*
+set wildignore+=*/tmp/*,*/public/*
 
 " Setup for xml and html omni complete
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags noci
