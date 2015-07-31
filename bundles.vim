@@ -22,6 +22,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=5
 let g:syntastic_ruby_checkers=['rubocop']
 let g:syntastic_ruby_rubocop_exec='~/bin/rubocop-wrapper'
+let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_python_checkers=['pep8']
 
 "NERDTree
