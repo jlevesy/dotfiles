@@ -4,19 +4,19 @@ call vundle#rc()
 "github based bundles
 
 "General
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 "Indent guides
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_auto_colors=0
 hi IndentGuidesOdd  guibg=red   ctermbg=3
 hi IndentGuidesEven guibg=green ctermbg=4
 
 "Automatic closing curly, brackets, tag... whatever needs to be closed
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 
 "Syntax checker
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 " Enable it on file open
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq  = 1
@@ -29,13 +29,13 @@ let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_python_checkers=['pep8']
 
 "NERDTree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 "NERDCommenter
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
 " General Auto completion
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 " Setup
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
@@ -43,7 +43,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extr
 set completeopt-=preview
 
 " CtrlP
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 set wildignore+=*/bower_components/*,*/dist/*,*/node_modules/*
 set wildignore+=*/tmp/*,*/public/*
 
@@ -52,16 +52,16 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags noci
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags noci
 
 "Js support
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
 "Js Autocompletion hook 4 YCM
-Bundle 'marijnh/tern_for_vim'
+Plugin 'marijnh/tern_for_vim'
 
 "Whitespace handling
-Bundle 'bronson/vim-trailing-whitespace'
+Plugin 'bronson/vim-trailing-whitespace'
 
 "Git
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 :nnoremap <leader>gb :Gblame<CR>
 :nnoremap <leader>gs :Gstatus<CR>
@@ -71,21 +71,22 @@ Bundle 'tpope/vim-fugitive'
 :nnoremap <leader>gp :Git push<CR>
 
 "BufferGator
-Bundle 'jeetsukumaran/vim-buffergator'
+Plugin 'jeetsukumaran/vim-buffergator'
 :nnoremap <C-b>:BuffergatorToggle
 "AirLine
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'skalnik/vim-vroom'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'ekalinin/dockerfile.vim'
-Bundle 'mustache/vim-mustache-handlebars'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'skalnik/vim-vroom'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'ekalinin/dockerfile.vim'
+Plugin 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1
-Bundle 'solarnz/thrift.vim'
-Bundle 'rking/ag.vim'
-Bundle 'Matt-Deacalion/vim-systemd-syntax'
-Bundle 'fatih/vim-go'
+Plugin 'solarnz/thrift.vim'
+Plugin 'rking/ag.vim'
+Plugin 'Matt-Deacalion/vim-systemd-syntax'
+Plugin 'fatih/vim-go'
+Plugin 'KabbAmine/zeavim.vim'
