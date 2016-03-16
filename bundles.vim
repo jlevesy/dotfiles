@@ -19,7 +19,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
 " Enable it on file open
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq  = 1
+let g:syntastic_check_on_wq  = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=5
@@ -27,6 +27,8 @@ let g:syntastic_ruby_checkers=['rubocop']
 let g:syntastic_ruby_rubocop_exec='~/bin/rubocop-wrapper'
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_python_checkers=['pep8']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 "NERDTree
 Plugin 'scrooloose/nerdtree'
@@ -74,14 +76,15 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'jeetsukumaran/vim-buffergator'
 :nnoremap <C-b>:BuffergatorToggle
 "AirLine
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'skalnik/vim-vroom'
-Plugin 'Lokaltog/vim-easymotion'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1
@@ -90,3 +93,5 @@ Plugin 'rking/ag.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'fatih/vim-go'
 Plugin 'KabbAmine/zeavim.vim'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+let vim_markdown_preview_hotkey='<C-m>'
