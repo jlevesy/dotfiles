@@ -27,8 +27,8 @@ let g:syntastic_ruby_checkers=['rubocop']
 let g:syntastic_ruby_rubocop_exec='~/bin/rubocop-wrapper'
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_python_checkers=['pep8']
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_go_checkers = ['gometalinter']
+let g:syntastic_go_gometalinter_args = ['--fast']
 
 "NERDTree
 Plugin 'scrooloose/nerdtree'
@@ -91,7 +91,6 @@ let g:mustache_abbreviations = 1
 Plugin 'solarnz/thrift.vim'
 Plugin 'rking/ag.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
-Plugin 'fatih/vim-go'
 Plugin 'KabbAmine/zeavim.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 let vim_markdown_preview_hotkey='<C-m>'
