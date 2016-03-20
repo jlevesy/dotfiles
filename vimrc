@@ -2,9 +2,6 @@ set nocompatible              " be iMproved, required
 set noswapfile
 filetype on " required
 
-filetype indent on
-filetype plugin on
-
 "Import bundle files
 source $HOME/.bundles.vim
 

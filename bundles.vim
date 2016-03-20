@@ -1,10 +1,10 @@
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
 "github based bundles
 
 "General
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 "Indent guides
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -49,16 +49,6 @@ Plugin 'kien/ctrlp.vim'
 set wildignore+=*/bower_components/*,*/dist/*,*/node_modules/*
 set wildignore+=*/tmp/*,*/public/*
 
-" Setup for xml and html omni complete
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags noci
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags noci
-
-"Js support
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
-"Js Autocompletion hook 4 YCM
-Plugin 'marijnh/tern_for_vim'
-
 "Whitespace handling
 Plugin 'bronson/vim-trailing-whitespace'
 
@@ -72,9 +62,6 @@ Plugin 'tpope/vim-fugitive'
 :nnoremap <leader>gc :Gcommit<CR>
 :nnoremap <leader>gp :Git push<CR>
 
-"BufferGator
-Plugin 'jeetsukumaran/vim-buffergator'
-:nnoremap <C-b>:BuffergatorToggle
 "AirLine
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -83,14 +70,13 @@ let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'skalnik/vim-vroom'
-Plugin 'easymotion/vim-easymotion'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1
+
 Plugin 'solarnz/thrift.vim'
 Plugin 'rking/ag.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
-Plugin 'KabbAmine/zeavim.vim'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-let vim_markdown_preview_hotkey='<C-m>'
+
+call vundle#end()
+filetype plugin indent on
