@@ -6,15 +6,6 @@ call vundle#begin()
 "General
 Plugin 'VundleVim/Vundle.vim'
 
-"Indent guides
-Plugin 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_auto_colors=0
-hi IndentGuidesOdd  guibg=red   ctermbg=3
-hi IndentGuidesEven guibg=green ctermbg=4
-
-"Automatic closing curly, brackets, tag... whatever needs to be closed
-Plugin 'Raimondi/delimitMate'
-
 "Syntax checker
 Plugin 'scrooloose/syntastic'
 " Enable it on file open
@@ -29,12 +20,6 @@ let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_python_checkers=['pep8']
 let g:syntastic_go_checkers = ['gometalinter']
 let g:syntastic_go_gometalinter_args = ['--fast']
-
-"NERDTree
-Plugin 'scrooloose/nerdtree'
-
-"NERDCommenter
-Plugin 'scrooloose/nerdcommenter'
 
 " General Auto completion
 Plugin 'Valloric/YouCompleteMe'
@@ -54,13 +39,6 @@ Plugin 'bronson/vim-trailing-whitespace'
 
 "Git
 Plugin 'tpope/vim-fugitive'
-
-:nnoremap <leader>gb :Gblame<CR>
-:nnoremap <leader>gs :Gstatus<CR>
-:nnoremap <leader>gd :Gdiff<CR>
-:nnoremap <leader>gl :Glog<CR>
-:nnoremap <leader>gc :Gcommit<CR>
-:nnoremap <leader>gp :Git push<CR>
 
 "AirLine
 Plugin 'vim-airline/vim-airline'
