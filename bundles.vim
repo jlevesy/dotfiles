@@ -6,6 +6,10 @@ call vundle#begin()
 "General
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+
 "Syntax checker
 Plugin 'scrooloose/syntastic'
 " Enable it on file open
@@ -14,10 +18,11 @@ let g:syntastic_check_on_wq  = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=5
+let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_ruby_checkers=['rubocop']
 let g:syntastic_ruby_rubocop_exec='~/bin/rubocop-wrapper'
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
-let g:syntastic_python_checkers=['pep8']
+let g:syntastic_python_checkers=['flake8']
 let g:syntastic_go_checkers = ['gometalinter']
 let g:syntastic_go_gometalinter_args = ['--fast']
 

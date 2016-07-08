@@ -39,9 +39,6 @@ let localleader=",,"
 "Indent Whole file
 :nnoremap <leader>i gg=G<cr>
 
-"NerdTree
-:nnoremap <leader>n :NERDTreeToggle<cr>
-
 "vim conf editing
 " edit vim (ev)
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
