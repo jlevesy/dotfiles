@@ -37,7 +37,7 @@ set completeopt-=preview
 " CtrlP
 Plugin 'kien/ctrlp.vim'
 set wildignore+=*/bower_components/*,*/dist/*,*/node_modules/*
-set wildignore+=*/tmp/*,*/public/*
+set wildignore+=*/tmp/*,/public/*
 
 "Whitespace handling
 Plugin 'bronson/vim-trailing-whitespace'
