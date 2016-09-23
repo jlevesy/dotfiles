@@ -18,6 +18,7 @@ let g:syntastic_check_on_wq  = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=5
+
 let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_ruby_checkers=['rubocop']
 let g:syntastic_ruby_rubocop_exec='~/bin/rubocop-wrapper'
@@ -63,6 +64,8 @@ Plugin 'rking/ag.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 
 Plugin 'rust-lang/rust.vim'
+let g:rustfmt_autosave = 1
+let g:rust_conceal = 1
 
 Plugin 'fatih/vim-go'
 let g:go_fmt_command = "gofmt"
