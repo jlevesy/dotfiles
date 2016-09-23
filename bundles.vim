@@ -25,12 +25,14 @@ let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_go_checkers = ['gometalinter']
 let g:syntastic_go_gometalinter_args = ['--fast']
+" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 " General Auto completion
 Plugin 'Valloric/YouCompleteMe'
 " Setup
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
+let g:ycm_show_diagnostics_ui = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 set completeopt-=preview
 
@@ -50,7 +52,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
-let g:airline_powerline_fonts = 1
 
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'ekalinin/dockerfile.vim'
@@ -60,6 +61,12 @@ let g:mustache_abbreviations = 1
 Plugin 'solarnz/thrift.vim'
 Plugin 'rking/ag.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
+
+Plugin 'rust-lang/rust.vim'
+
+Plugin 'fatih/vim-go'
+let g:go_fmt_command = "gofmt"
+let g:go_list_type = "quickfix"
 
 call vundle#end()
 filetype plugin indent on

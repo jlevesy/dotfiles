@@ -24,7 +24,7 @@ set ruler
 
 "Line of death
 set textwidth=80
-set colorcolumn=+1
+set colorcolumn=+5
 
 "Leader and localleader setup
 let mapleader=","
