@@ -22,11 +22,11 @@ let g:syntastic_loc_list_height=5
 let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_ruby_checkers=['rubocop']
 let g:syntastic_ruby_rubocop_exec='~/bin/rubocop-wrapper'
-let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_go_checkers = ['gometalinter']
 let g:syntastic_go_gometalinter_args = ['--fast']
-" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_quiet_messages = {"regex": 'is unstable and should only be used on the nightly compiler, but it is currently accepted for backwards compatibility; this will soon change, see issue #31847 for more details'}
 
 " General Auto completion
 Plugin 'Valloric/YouCompleteMe'
@@ -54,7 +54,6 @@ Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1
