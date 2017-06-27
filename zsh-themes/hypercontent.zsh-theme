@@ -10,12 +10,12 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}➜ "
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§ "
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%}▲ "
 
-PROMPT='$(_hyper_content_user_host)$(_hyper_content_python_venv)$(_hyper_content_git_prompt_info)%{$fg[magenta]%}$(git_prompt_status)$(_hyper_content_timing)${_hyper_content_return_status}➜ '
+PROMPT='$(_hyper_content_user_host)$(_hyper_content_python_venv)$(_hyper_content_git_prompt_info)%{$fg[magenta]%}$(git_prompt_status)$(_hyper_content_timing)${_hyper_content_return_status}λ '
 
 local _hyper_content_return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 
 function _hyper_content_user_host() {
-  echo "%{$fg[yellow]%}(${HOST##*/})%{$reset_color%}:"
+  echo "%{$fg[yellow]%}(${HOST##*/})%{$reset_color%} "
 }
 
 function _hyper_content_git_prompt_info() {
@@ -29,13 +29,14 @@ function _hyper_content_python_venv() {
 }
 
 function _hyper_content_preexec() {
-  timer=${timer:-$SECONDS}
+  timer=$(($(date +%s%N)/1000000))
   export HYPER_CONTENT_TIMING=""
 }
 
 function _hyper_content_precmd() {
   if [ $timer ]; then
-    elapsed=$(($SECONDS - $timer))
+    now=$(($(date +%s%N)/1000000))
+    elapsed=$(($now - $timer))
     export HYPER_CONTENT_TIMING="$elapsed"
   fi
   unset timer
@@ -43,7 +44,7 @@ function _hyper_content_precmd() {
 
 function _hyper_content_timing() {
   if [ -n "$HYPER_CONTENT_TIMING" ]; then
-    echo "%{$fg[red]%}(${HYPER_CONTENT_TIMING}ms)%{$reset_color%} "
+    echo "%{$fg[red]%}(${HYPER_CONTENT_TIMING} ms)%{$reset_color%} "
   fi
 }
 
