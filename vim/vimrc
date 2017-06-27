@@ -16,7 +16,7 @@ call vundle#end()
 filetype plugin indent on
 
 "Colors
-colorscheme moody
+colorscheme moonfly
 
 "Indentation with spaces only
 "1 tab = v spaces
