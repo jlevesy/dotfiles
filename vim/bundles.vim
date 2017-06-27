@@ -1,6 +1,5 @@
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
-
 "github based bundles
 
 "General
@@ -19,13 +18,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=3
 
-let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_ruby_checkers=['rubocop']
 let g:syntastic_ruby_rubocop_exec='~/bin/rubocop-wrapper'
 let g:syntastic_python_checkers=['flake8']
-let g:syntastic_go_checkers = ['gometalinter']
-let g:syntastic_go_gometalinter_args = ['--fast']
 let g:syntastic_rust_checkers = ['cargo']
+let g:syntastic_go_checkers = ['gometalinter']
+let g:syntastic_go_gometalinter_args= ['--disable-all', '--enable=vet', '--enable=vetshadow', '--enable=gotype']
 
 " General Auto completion
 Plugin 'Valloric/YouCompleteMe'
@@ -53,16 +52,18 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
 Plugin 'ekalinin/dockerfile.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-let g:mustache_abbreviations = 1
 
-Plugin 'solarnz/thrift.vim'
 Plugin 'rking/ag.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 
 Plugin 'jlevesy/rust.vim'
 let g:rustfmt_autosave = 0
 let g:rust_conceal = 1
+
+Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0
+
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on

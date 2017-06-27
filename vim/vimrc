@@ -1,14 +1,23 @@
 set nocompatible              " be iMproved, required
 set noswapfile
-filetype on " required
 
-"Import bundle files
-source $HOME/.bundles.vim
+filetype on " required
+syntax enable
+
+" Setup vundle
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+"Import comon config files
+source $HOME/dotfiles/vim/common.vim
+
+call vundle#end()
+
+filetype plugin indent on
 
 "Colors
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
-
 set background=dark
 colorscheme jellybeans
 
@@ -30,12 +39,6 @@ set colorcolumn=+5
 let mapleader=","
 let localleader=",,"
 
-"Text editing
-" duplicate line
-:nnoremap <leader>d :t.<cr>
-:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-:nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-
 "Indent Whole file
 :nnoremap <leader>i gg=G<cr>
 
@@ -43,7 +46,7 @@ let localleader=",,"
 " edit vim (ev)
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " edit bundles (eb)
-:nnoremap <leader>eb :vsplit ~/.bundles.vim<cr>
+:nnoremap <leader>eb :vsplit ~/dotfiles/vimbundles.vim<cr>
 " reload conf
 :nnoremap <leader>rc :source $MYVIMRC<cr>
 
@@ -52,10 +55,3 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-:match ErrorMsg '\%>80v.\+'
-
-" doh, force to reload filetype
-filetype off
-filetype on
-syntax enable

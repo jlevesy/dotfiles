@@ -1,6 +1,7 @@
 [user]
 	name = Julien Levesy
 	email = jlevesy@gmail.com
+	signingkey = C57548FB
 [color]
 	ui = true
 [alias]
