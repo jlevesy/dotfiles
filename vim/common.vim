@@ -4,7 +4,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 
-"Git
+" Git
 Plugin 'tpope/vim-fugitive'
 
 " General Auto completion
@@ -16,10 +16,10 @@ Plugin 'kien/ctrlp.vim'
 set wildignore+=*/bower_components/*,*/dist/*,*/node_modules/*
 set wildignore+=*/tmp/*,/public/*,*/target/*,*/vendor/*
 
-"Whitespace handling
+" Whitespace handling
 Plugin 'bronson/vim-trailing-whitespace'
 
-"AirLine
+" AirLine
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1

@@ -11,6 +11,15 @@ call vundle#begin()
 "Import comon config files
 source $HOME/dotfiles/vim/common.vim
 
+augroup language_settings
+  autocmd FileType go source $HOME/dotfiles/vim/go.vim
+
+  autocmd FileType python source $HOME/dotfiles/vim/default.vim
+  autocmd FileType ruby source $HOME/dotfiles/vim/default.vim
+  autocmd FileType javascript source $HOME/dotfiles/vim/default.vim
+  autocmd FileType rust source $HOME/dotfiles/vim/default.vim
+augroup END
+
 call vundle#end()
 
 filetype plugin indent on

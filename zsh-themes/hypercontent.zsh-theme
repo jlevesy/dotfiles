@@ -42,7 +42,7 @@ function _hyper_content_precmd() {
 
 function _hyper_content_timing() {
   if [ -n "$HYPER_CONTENT_TIMING" ]; then
-    echo "%{$fg[red]%}(${HYPER_CONTENT_TIMING} ms)%{$reset_color%}"
+    echo "%{$fg[yellow]%}(${HYPER_CONTENT_TIMING} ms)%{$reset_color%}"
   fi
 }
 
