@@ -2,8 +2,9 @@
 
 [options]
 scrollback_lines = 10000
-font = Inconsolata For Powerline 12
-cursor_shape = ibeam
+font = Inconsolata for Powerline 12
+
+cursor_shape = block
 mouse_autohide = true
 
 [colors]
