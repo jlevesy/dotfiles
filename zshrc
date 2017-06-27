@@ -1,6 +1,6 @@
 export ZSH=/home/jlevesy/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="hypercontent"
 plugins=(git archlinux systemd rust cargo docker golang rvm virtualenv)
 
 source $ZSH/oh-my-zsh.sh
@@ -10,7 +10,9 @@ alias vi=vim
 alias sl=ls
 alias b="hub browse"
 alias screen-home="xrandr --output HDMI1 --auto --above eDP1"
+alias screen-prez="xrandr --output DP2--auto --above eDP1"
 alias laptop="xrandr --output HDMI1 --off"
+alias laptop-vga="xrandr --output DP2 --off"
 alias lock="i3lock --color 000000"
 alias reredshift="systemctl --user restart redshift"
 alias firefox="firefox-nightly"
