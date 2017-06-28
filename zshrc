@@ -7,6 +7,7 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias vi=vim
+alias govim="vim -u ${HOME}/dotfiles/vim/go.vimrc"
 alias sl=ls
 alias b="hub browse"
 alias screen-home="xrandr --output HDMI1 --auto --above eDP1"

@@ -6,16 +6,16 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 source $HOME/dotfiles/vim/vundle/common.vim
-source $HOME/dotfiles/vim/vundle/default.vim
+source $HOME/dotfiles/vim/vundle/go.vim
 
 call vundle#end()
 
 "Indentation with spaces only
 "1 tab = v spaces
 set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 
 "Line of death
-set textwidth=80
-set colorcolumn=+5
+set textwidth=120
+set colorcolumn=+100
