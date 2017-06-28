@@ -1,4 +1,32 @@
 Plugin 'fatih/vim-go'
+nmap <leader>t <Plug>(go-alternate-edit)
+nmap <leader>tt <Plug>(go-test)
+nmap <leader>rt <Plug>(go-test-func)
+nmap <leader>i <Plug>(go-import)
+nmap <leader>l <Plug>(go-lint)
+nmap <leader>ll <Plug>(go-metalinter)
+nmap <leader>v <Plug>(go-vet)
+nmap <leader>o <Plug>(go-doc-split)
+nmap <leader>d <Plug>(go-def-split)
+nmap <leader>r <Plug>(go-rename)
+
+let g:go_auto_type_info = 1
+let g:go_info_mode = 'guru'
+let g:go_auto_sameids = 1
+
+let g:go_highlight_array_whitespace_error = 1
+let g:go_highlight_chan_whitespace_error = 1
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+
+let g:go_list_height = 5
+
 Plugin 'Shougo/neocomplete'
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
@@ -13,4 +41,4 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
       \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 Plugin 'majutsushi/tagbar'
-Plugin 'SirVer/ultisnips'
+nmap <F12> :TagbarToggle<CR>
