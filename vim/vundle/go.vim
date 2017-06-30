@@ -10,10 +10,6 @@ nmap <leader>o <Plug>(go-doc-split)
 nmap <leader>d <Plug>(go-def-split)
 nmap <leader>r <Plug>(go-rename)
 
-let g:go_auto_type_info = 1
-let g:go_info_mode = 'guru'
-let g:go_auto_sameids = 1
-
 let g:go_highlight_array_whitespace_error = 1
 let g:go_highlight_chan_whitespace_error = 1
 

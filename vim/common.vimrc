@@ -8,6 +8,9 @@ colorscheme moonfly
 
 filetype plugin indent on
 
+" Make backspace great again
+set backspace=2
+
 "Leader and localleader setup
 let mapleader=","
 let localleader=",,"
