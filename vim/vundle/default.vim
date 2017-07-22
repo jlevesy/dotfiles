@@ -13,6 +13,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height=3
 
 let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_vue_checkers=['eslint']
 let g:syntastic_ruby_checkers=['rubocop']
 let g:syntastic_ruby_rubocop_exec='~/bin/rubocop-wrapper'
 let g:syntastic_python_checkers=['flake8']
@@ -26,3 +27,6 @@ let g:rust_conceal = 1
 
 Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
+
+Plugin 'posva/vim-vue'
+au BufNewFile,BufRead *.vue set filetype=vue

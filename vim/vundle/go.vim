@@ -23,6 +23,8 @@ let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 
 let g:go_list_height = 5
 
+let g:go_fmt_options = "-s"
+
 Plugin 'Shougo/neocomplete'
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
