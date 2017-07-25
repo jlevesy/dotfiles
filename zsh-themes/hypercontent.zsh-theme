@@ -10,9 +10,17 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}➜ "
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§ "
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%}▲ "
 
-export HYPER_CONTENT_TIMING="x"
+HYPER_CONTENT_TIMING="x"
 
-PROMPT='$(_hyper_content_timing) $(_hyper_content_python_venv)$(_hyper_content_git_prompt_info)%{$fg[magenta]%}$(git_prompt_status)${_hyper_content_return_status}λ '
+HYPER_CONTENT_INDEX=$(expr `date +%s` % 5)
+typeset -A HYPER_CONTENT_SMILEY
+HYPER_CONTENT_SMILEY[0]="¯\_(ツ)_/¯"
+HYPER_CONTENT_SMILEY[1]="( ͡° ͜ʖ ͡°)"
+HYPER_CONTENT_SMILEY[2]="\(^ヮ^)/"
+HYPER_CONTENT_SMILEY[3]="∑(O_O;)"
+HYPER_CONTENT_SMILEY[4]="(╯°o°）╯ ┻━┻"
+
+PROMPT='$(_hyper_content_timing)$(_hyper_content_python_venv)$(_hyper_content_smiley)$(_hyper_content_git_prompt_info)%{$fg[magenta]%}$(git_prompt_status)${_hyper_content_return_status}λ '
 
 local _hyper_content_return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 
@@ -24,6 +32,10 @@ function _hyper_content_python_venv() {
   if [[ $VIRTUAL_ENV != "" ]]; then
     echo "%{$fg[blue]%}(${VIRTUAL_ENV##*/})%{$reset_color%} "
   fi
+}
+
+function _hyper_content_smiley() {
+  echo "%{$fg[blue]%}${HYPER_CONTENT_SMILEY[${HYPER_CONTENT_INDEX}]} %{$reset_color%}"
 }
 
 function _hyper_content_preexec() {
