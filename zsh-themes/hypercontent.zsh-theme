@@ -35,7 +35,7 @@ function _hyper_content_python_venv() {
 }
 
 function _hyper_content_smiley() {
-  echo "%{$fg[blue]%} ${HYPER_CONTENT_SMILEY[${HYPER_CONTENT_INDEX}]} %{$reset_color%}"
+  echo "%{$fg[blue]%}${HYPER_CONTENT_SMILEY[${HYPER_CONTENT_INDEX}]} %{$reset_color%}"
 }
 
 function _hyper_content_preexec() {
@@ -54,7 +54,7 @@ function _hyper_content_precmd() {
 
 function _hyper_content_timing() {
   if [ -n "$HYPER_CONTENT_TIMING" ]; then
-    echo "%{$fg[yellow]%}(${HYPER_CONTENT_TIMING} ms)%{$reset_color%}"
+    echo "%{$fg[yellow]%}(${HYPER_CONTENT_TIMING} ms)%{$reset_color%} "
   fi
 }
 
