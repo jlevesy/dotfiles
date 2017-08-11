@@ -9,6 +9,7 @@ nmap <leader>v <Plug>(go-vet)
 nmap <leader>o <Plug>(go-doc-split)
 nmap <leader>d <Plug>(go-def-split)
 nmap <leader>r <Plug>(go-rename)
+nmap <leader>R <Plug>(go-run)
 nmap <leader>b <Plug>(go-build)
 
 let g:go_highlight_array_whitespace_error = 1
