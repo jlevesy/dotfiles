@@ -1,6 +1,6 @@
 Plugin 'fatih/vim-go'
 nmap <leader>t <Plug>(go-alternate-edit)
-nmap <leader>tt <Plug>(go-test)
+nmap <leader>T  <Plug>(go-test)
 nmap <leader>rt <Plug>(go-test-func)
 nmap <leader>i <Plug>(go-import)
 nmap <leader>l <Plug>(go-lint)
