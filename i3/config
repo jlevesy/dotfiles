@@ -167,4 +167,4 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen
 exec setxkbmap fr
 exec syndaemon -i 2 -t -k
 exec synclient MaxTapTime=0 # Disable tap to click
-exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
+exec --no-startup-id feh --bg-max ~/wallpapers/wallpaper.png

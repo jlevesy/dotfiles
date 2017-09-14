@@ -14,7 +14,7 @@ alias screen-home="xrandr --output HDMI1 --auto --above eDP1"
 alias screen-prez="xrandr --output DP2--auto --above eDP1"
 alias laptop="xrandr --output HDMI1 --off"
 alias laptop-vga="xrandr --output DP2 --off"
-alias lock="i3lock --color 000000"
+alias lock="~/dotfiles/scripts/lock.sh"
 alias reredshift="systemctl --user restart redshift"
 alias firefox="firefox-nightly"
 alias open="xdg-open"
@@ -27,6 +27,7 @@ alias jle="cd ~/code/src/github.com/jlevesy"
 export EDITOR=vim
 
 export GOPATH=$HOME/code
+export GOBIN=$GOPATH/bin
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
