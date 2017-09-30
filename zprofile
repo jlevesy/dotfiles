@@ -1,5 +1,8 @@
 eval $(ssh-agent)
-ssh-add ~/.ssh/id_rsa
+
+if [ -e ~/.specific.zprofile ]; then
+  source ~/.specific.zprofile
+fi
 
 export TERMINAL=termite
-export BROWSER=firefox-nightly
+export BROWSER=firefox-developer
