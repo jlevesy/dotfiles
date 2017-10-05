@@ -1,12 +1,12 @@
 " Common setup between my profiles
-source $HOME/dotfiles/vim/common.vimrc
+source ${DOTFILES}/vim/common.vimrc
 
 " Setup vundle
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
-source $HOME/dotfiles/vim/vundle/common.vim
-source $HOME/dotfiles/vim/vundle/go.vim
+source ${DOTFILES}/vim/vundle/common.vim
+source ${DOTFILES}/vim/vundle/go.vim
 
 call vundle#end()
 

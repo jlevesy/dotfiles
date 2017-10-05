@@ -22,3 +22,11 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'minimalist'
 let g:airline_skip_empty_sections = 1
 set laststatus=2
+
+" AckVim
+
+Plugin 'mileszs/ack.vim'
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
