@@ -31,6 +31,7 @@ export GOBIN=$GOPATH/bin
 # source /usr/bin/virtualenvwrapper.sh
 
 export PATH="$HOME/.npm/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
