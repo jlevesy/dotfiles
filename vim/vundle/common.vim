@@ -35,7 +35,6 @@ set laststatus=2
 " DistractionFreeMode
 Plugin 'junegunn/goyo.vim'
 
-
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack<Space>
 

@@ -5,4 +5,4 @@ if [ -e ~/.specific.zprofile ]; then
 fi
 
 export TERMINAL=termite
-export BROWSER=firefox-developer
+export BROWSER=firefox-developer-edition
