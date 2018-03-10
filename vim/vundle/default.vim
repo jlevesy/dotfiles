@@ -1,10 +1,10 @@
 " General Auto completion
-Plugin 'Shougo/neocomplete'
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#enable_auto_select = 1
-set completeopt=longest,menuone
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 Plugin 'w0rp/ale'
 let g:airline#extensions#ale#enabled = 1
@@ -13,7 +13,7 @@ let g:ale_set_quickfix = 1
 
 Plugin 'ekalinin/dockerfile.vim'
 
-Plugin 'jlevesy/rust.vim'
+Plugin 'rust/rust.vim'
 let g:rustfmt_autosave = 0
 let g:rust_conceal = 1
 
