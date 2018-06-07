@@ -13,7 +13,7 @@ let g:ale_set_quickfix = 1
 
 Plugin 'ekalinin/dockerfile.vim'
 
-Plugin 'rust/rust.vim'
+Plugin 'rust-lang/rust.vim'
 let g:rustfmt_autosave = 0
 let g:rust_conceal = 1
 

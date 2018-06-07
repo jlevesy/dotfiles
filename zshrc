@@ -20,6 +20,8 @@ alias laptop-paysage="xrandr --output eDP1 --auto --rotate normal"
 alias reredshift="systemctl --user restart redshift"
 alias open="xdg-open"
 alias reloadrc="source ~/.zshrc"
+alias ip='ip --color'
+alias ipb='ip --color --brief'
 
 if [ -e ~/.specific.zshrc ]; then
   source ~/.specific.zshrc
