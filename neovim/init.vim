@@ -25,23 +25,30 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'phpactor/phpactor', { 'for': 'php' }
+Plug 'lumiliet/vim-twig', { 'for': 'php' }
+Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php'}
 
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'bronson/vim-trailing-whitespace'
 
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
-" FuzzyFileSearch
+" Fuzzy file search
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-Plug 'bronson/vim-trailing-whitespace'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'Shougo/neocomplete'
+Plug 'majutsushi/tagbar'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -63,6 +70,17 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'minimalist'
 let g:airline_skip_empty_sections = 1
 
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#enable_auto_select = 1
+
+let g:php_cs_fixer_rules = "@PSR2"             " options: --rules (default:@PSR2)
+let g:php_cs_fixer_php_path = "php"            " Path to PHP
+let g:php_cs_fixer_enable_default_mapping = 1  " Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                 " Call command with dry-run option
+let g:php_cs_fixer_verbose = 0                 " Return the output of command if 1, else an inline information.
+
 " toggle spelling
 nnoremap <leader>s :set invspell<CR>
 
@@ -72,7 +90,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Fzf shortcuts
+" FZF shortcuts
 nmap <c-p> :Files<CR>
 nmap ; :Buffers<CR>
 nmap <Leader>a :Ag<Space>
+
+nmap <F12> :TagbarToggle<CR>
