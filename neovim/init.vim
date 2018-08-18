@@ -95,4 +95,6 @@ nmap <c-p> :Files<CR>
 nmap ; :Buffers<CR>
 nmap <Leader>a :Ag<Space>
 
+nmap <Leader>w :FixWhitespace<CR>
+
 nmap <F12> :TagbarToggle<CR>

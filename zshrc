@@ -26,7 +26,7 @@ if [ -e ~/.specific.zshrc ]; then
   source ~/.specific.zshrc
 fi
 
-export EDITOR=vim
+export EDITOR=nvim
 export GOPATH=$HOME/code
 export GOBIN=$GOPATH/bin
 

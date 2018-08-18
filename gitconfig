@@ -1,7 +1,6 @@
 [user]
 	name = Julien Levesy
 	email = jlevesy@gmail.com
-	signingkey = C57548FB
 [color]
 	ui = true
 [alias]
@@ -10,25 +9,24 @@
 	br = branch
 	co = checkout
 
-        l = log --pretty='%C(yellow)%h -%Creset %s%Creset' --abbrev-commit --graph
-        lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-        lgs = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --stat
-        lgsp = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --stat -p
+  l = log --pretty='%C(yellow)%h -%Creset %s%Creset' --abbrev-commit --graph
+  lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lgs = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --stat
+  lgsp = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --stat -p
 
-        la = !git l --all
-        lga = !git lg --all
-        lgsa = !git lgs --all
-        lgspa = !git lgsp --all
+  la = !git l --all
+  lga = !git lg --all
+  lgsa = !git lgs --all
+  lgspa = !git lgsp --all
 
 [ui]
 	color = true
 [core]
 	whitespace = trailing-space,space-before-tab,tab-in-indent
-	editor = vim
 [push]
 	default = simple
 [rerere]
-	enabled = false
+	enabled = true
 [grep]
 	lineNumber = true
 [merge]
