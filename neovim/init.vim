@@ -25,7 +25,9 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 Plug 'phpactor/phpactor', { 'for': 'php' }
+Plug 'kristijanhusak/deoplete-phpactor', { 'for': 'php'}
 Plug 'lumiliet/vim-twig', { 'for': 'php' }
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php'}
 
@@ -46,9 +48,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'Shougo/neocomplete'
+Plug 'Shougo/deoplete.nvim'
 Plug 'majutsushi/tagbar'
-Plug 'w0rp/ale'
+Plug 'w0rp/ale', { 'for': ['php', 'js', 'ruby', 'html', 'css'] }
 
 call plug#end()
 
@@ -70,10 +72,8 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'minimalist'
 let g:airline_skip_empty_sections = 1
 
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#enable_auto_select = 1
+let g:deoplete#enable_at_startup = 1
+set completeopt-=preview
 
 let g:php_cs_fixer_rules = "@PSR2"             " options: --rules (default:@PSR2)
 let g:php_cs_fixer_php_path = "php"            " Path to PHP
