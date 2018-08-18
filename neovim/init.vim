@@ -54,7 +54,8 @@ Plug 'w0rp/ale', { 'for': ['php', 'js', 'ruby', 'html', 'css'] }
 
 call plug#end()
 
-filetype plugin indent on
+filetype plugin on
+filetype indent on
 syntax on
 
 let g:go_highlight_array_whitespace_error = 1
@@ -95,6 +96,8 @@ nmap <c-p> :Files<CR>
 nmap ; :Buffers<CR>
 nmap <Leader>a :Ag<Space>
 
+" Misc
 nmap <Leader>w :FixWhitespace<CR>
-
 nmap <F12> :TagbarToggle<CR>
+"Indent Whole file
+:nnoremap <leader>i gg=G<cr>
