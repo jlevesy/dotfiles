@@ -70,9 +70,22 @@ lua <<EOF
   require'nvim_lsp'.gopls.setup{}
   require'nvim_lsp'.dockerls.setup{}
   require'nvim_lsp'.bashls.setup{}
+  require'nvim_lsp'.solargraph.setup{
+    filetypes = { "ruby", "rb" }
+  }
+  require'nvim_lsp'.tsserver.setup{}
+  require'nvim_lsp'.yamlls.setup{
+    filetypes = { "yaml", "yml" }
+  }
+  require'nvim_lsp'.rust_analyzer.setup{}
 EOF
 
 autocmd Filetype go setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype sh setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype rb setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype js setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
+autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)
 autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
 
 " LSP shortcuts
@@ -83,6 +96,6 @@ nnoremap <silent> <leader>k <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <leader>r <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>R <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> <leader>cs <cmd>lua vim.lsp.buf.incoming_calls()<CR>
-nnoremap <silent> <leader>s <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> <leader>ds <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <leader>q :cclose<CR>
