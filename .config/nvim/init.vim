@@ -81,6 +81,7 @@ lua <<EOF
 EOF
 
 autocmd Filetype go setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype rs setlocal omnifunc=v:lua.vim.lsp.omnifunc
 autocmd Filetype sh setlocal omnifunc=v:lua.vim.lsp.omnifunc
 autocmd Filetype rb setlocal omnifunc=v:lua.vim.lsp.omnifunc
 autocmd Filetype js setlocal omnifunc=v:lua.vim.lsp.omnifunc
@@ -95,6 +96,7 @@ nnoremap <silent> <leader>i <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <leader>k <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <leader>r <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>R <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <silent> <leader>F <cmd>lua vim.lsp.buf.formatting()<CR>
 nnoremap <silent> <leader>cs <cmd>lua vim.lsp.buf.incoming_calls()<CR>
 nnoremap <silent> <leader>ds <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
