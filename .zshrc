@@ -15,13 +15,11 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 export npm_config_prefix=~/.node_modules
 
-export PATH="$HOME/.npm/bin:$PATH"
-export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.node_modules/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -34,8 +32,6 @@ alias vi=nvim
 alias vim=nvim
 alias sl=ls
 alias b="hub browse"
-alias laptop="xrandr --output DP-3-1 --off --output DP-3-2 --off"
-alias reredshift="systemctl --user restart redshift"
 alias open="xdg-open"
 alias ip='ip --color'
 alias ipb='ip --color --brief'

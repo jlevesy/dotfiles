@@ -20,14 +20,7 @@ let localleader=",,"
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'majutsushi/tagbar'
-
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'racer-rust/vim-racer', { 'for': 'rust' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
-Plug 'w0rp/ale', { 'for': ['php', 'js', 'ruby', 'html', 'css', 'yaml', 'toml', 'rust'] }
-
+Plug 'neovim/nvim-lspconfig'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
@@ -35,13 +28,9 @@ Plug 'tpope/vim-surround'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'SirVer/ultisnips'
-
-" Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
-
-" Fuzzy file search
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
@@ -56,10 +45,6 @@ set noshowmode
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
       \ }
-
-let g:deoplete#enable_at_startup = 1
-" set completeopt-=preview
-
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 
 " toggle spelling
@@ -79,6 +64,40 @@ nmap <Leader>f :Ag<space><c-r>=expand("<cword>")<cr><CR>
 " Misc
 nmap <Leader>w :FixWhitespace<CR>
 nmap <F12> :TagbarToggle<CR>
-"Indent Whole file
-"
-noremap <Leader><tab> <esc>gg=G<C-o><C-o>zz
+
+" Neovim LSP setup
+lua <<EOF
+  require'nvim_lsp'.gopls.setup{}
+  require'nvim_lsp'.dockerls.setup{}
+  require'nvim_lsp'.bashls.setup{}
+  require'nvim_lsp'.solargraph.setup{
+    filetypes = { "ruby", "rb" }
+  }
+  require'nvim_lsp'.tsserver.setup{}
+  require'nvim_lsp'.yamlls.setup{
+    filetypes = { "yaml", "yml" }
+  }
+  require'nvim_lsp'.rust_analyzer.setup{}
+EOF
+
+autocmd Filetype go setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype rs setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype sh setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype rb setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype js setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
+autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)
+autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
+
+" LSP shortcuts
+nnoremap <silent> <leader>d <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <leader>D <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> <leader>i <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <leader>k <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <leader>r <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <leader>R <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <silent> <leader>F <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <silent> <leader>cs <cmd>lua vim.lsp.buf.incoming_calls()<CR>
+nnoremap <silent> <leader>ds <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <leader>q :cclose<CR>
