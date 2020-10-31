@@ -4,15 +4,16 @@ icons = "awesome"
 [[block]]
 block = "music"
 player = "spotify"
-buttons = ["play", "next"]
+buttons = ["prev", "play", "next"]
 
-# [[block]]
-# block = "docker"
+[[block]]
+block = "docker"
+format = "{running}/{total}"
 
 [[block]]
 block = "disk_space"
 path = "/"
-alias = ""
+format = "{icon}{used}/{total} {unit}"
 info_type = "available"
 unit = "GB"
 interval = 20
@@ -22,7 +23,7 @@ alert = 10.0
 [[block]]
 block = "disk_space"
 path = "/var/lib/docker"
-alias = ""
+format = "{icon}{used}/{total} {unit}"
 info_type = "available"
 unit = "GB"
 interval = 20
@@ -32,7 +33,7 @@ alert = 10.0
 [[block]]
 block = "disk_space"
 path = "/home/jlevesy"
-alias = ""
+format = "{icon}{used}/{total} {unit}"
 info_type = "available"
 unit = "GB"
 interval = 20
@@ -57,10 +58,7 @@ format = "{1m} {5m} {15m}"
 [[block]]
 block = "net"
 device = "wlan0"
-ssid = true
-ip = true
-speed_up = true
-graph_up = false
+format = "{ssid} {signal_strength} {ip}"
 interval = 5
 
 [[block]]
@@ -68,7 +66,7 @@ block = "sound"
 
 [[block]]
 block = "battery"
-interval = 10
+driver = "upower"
 format = "{percentage}% {time}"
 
 [[block]]
