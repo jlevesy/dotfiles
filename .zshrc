@@ -31,7 +31,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 alias vi=nvim
 alias vim=nvim
 alias sl=ls
-alias b="hub browse"
+alias b="gh repo view --web"
+alias tree="ls --tree -A --blocks name"
 alias open="xdg-open"
 alias ip='ip --color'
 alias ipb='ip --color --brief'
@@ -41,3 +42,5 @@ alias cat=bat
 if [ -e ~/.specific.zshrc ]; then
   source ~/.specific.zshrc
 fi
+
+export BUNDLE_GITHUB__COM=x-access-token:$GITHUB_TOKEN

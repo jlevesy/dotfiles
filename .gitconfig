@@ -8,6 +8,9 @@
   color = true
 [core]
   whitespace = trailing-space,space-before-tab
+[pull]
+  rebase = false
+  ff = only
 [push]
   default = simple
 [rerere]
@@ -16,8 +19,8 @@
   lineNumber = true
 [commit]
   gpgsign = true
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+; [url "ssh://git@github.com/"]
+; 	insteadOf = https://github.com/
 [alias]
   st = status
   ci = commit

@@ -188,6 +188,7 @@ bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen
 
 exec setxkbmap fr
 exec --no-startup-id feh --bg-max ~/.config/wallpaper/current
+exec --no-startup-id systemctl --user import-environment
 
 # Colors
 set $bg #282828
