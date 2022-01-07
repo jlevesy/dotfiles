@@ -8,6 +8,7 @@
   color = true
 [core]
   whitespace = trailing-space,space-before-tab
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [pull]
   rebase = false
   ff = only
@@ -19,8 +20,8 @@
   lineNumber = true
 [commit]
   gpgsign = true
-; [url "ssh://git@github.com/"]
-; 	insteadOf = https://github.com/
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
 [alias]
   st = status
   ci = commit
@@ -34,3 +35,5 @@
   lga = !git lg --all
   lgsa = !git lgs --all
   lgspa = !git lgsp --all
+[interactive]
+  diffFilter = diff-so-fancy --patch

@@ -13,7 +13,7 @@ format = "{running}/{total}"
 [[block]]
 block = "disk_space"
 path = "/"
-format = "{icon}{used}/{total} {unit}"
+format = "{icon}{used}/{total}"
 info_type = "available"
 unit = "GB"
 interval = 20
@@ -23,7 +23,7 @@ alert = 10.0
 [[block]]
 block = "disk_space"
 path = "/var/lib/docker"
-format = "{icon}{used}/{total} {unit}"
+format = "{icon}{used}/{total}"
 info_type = "available"
 unit = "GB"
 interval = 20
@@ -33,7 +33,7 @@ alert = 10.0
 [[block]]
 block = "disk_space"
 path = "/home/jlevesy"
-format = "{icon}{used}/{total} {unit}"
+format = "{icon}{used}/{total}"
 info_type = "available"
 unit = "GB"
 interval = 20
@@ -43,8 +43,8 @@ alert = 10.0
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mup}%"
-format_swap = "{SUp}%"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
 
 [[block]]
 block = "cpu"
@@ -57,7 +57,7 @@ format = "{1m} {5m} {15m}"
 
 [[block]]
 block = "net"
-device = "wlan0"
+device = "wlp0s20f3"
 format = "{ssid} {signal_strength} {ip}"
 interval = 5
 

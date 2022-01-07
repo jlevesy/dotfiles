@@ -97,10 +97,11 @@ autocmd Filetype rs setlocal omnifunc=v:lua.vim.lsp.omnifunc
 autocmd Filetype sh setlocal omnifunc=v:lua.vim.lsp.omnifunc
 autocmd Filetype rb setlocal omnifunc=v:lua.vim.lsp.omnifunc
 autocmd Filetype js setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype java setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)
-autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
-autocmd BufWritePre *.java lua vim.lsp.buf.formatting_sync(nil, 1000)
+"autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
+"autocmd BufWritePre *.java lua vim.lsp.buf.formatting_sync(nil, 1000)
 
 " LSP shortcuts
 nnoremap <silent> <leader>d <cmd>lua vim.lsp.buf.definition()<CR>
@@ -112,5 +113,6 @@ nnoremap <silent> <leader>R <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> <leader>F <cmd>lua vim.lsp.buf.formatting()<CR>
 nnoremap <silent> <leader>cs <cmd>lua vim.lsp.buf.incoming_calls()<CR>
 nnoremap <silent> <leader>ds <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> <leader>c <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <leader>q :cclose<CR>
