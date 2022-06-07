@@ -13,7 +13,6 @@ set wildmode=longest,list   " get bash-like tab completions
 set cc=120                  " set an 120 column border for good coding style
 set laststatus=2
 
-colorscheme gruvbox
 let mapleader=","
 let localleader=",,"
 
@@ -41,6 +40,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 
 call plug#end()
+
+autocmd vimenter * ++nested colorscheme gruvbox
 
 filetype plugin on
 filetype indent on

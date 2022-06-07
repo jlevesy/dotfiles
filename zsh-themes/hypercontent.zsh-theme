@@ -27,13 +27,13 @@ function _hyper_content_python_venv() {
 }
 
 function _hyper_content_preexec() {
-  timer=$(($(date +%s%N)/1000000))
+  timer=$(date +%s)
   export HYPER_CONTENT_TIMING=""
 }
 
 function _hyper_content_precmd() {
   if [ $timer ]; then
-    now=$(($(date +%s%N)/1000000))
+    now=$(date +%s)
     elapsed=$(($now - $timer))
     export HYPER_CONTENT_TIMING="$elapsed"
   fi
@@ -42,7 +42,7 @@ function _hyper_content_precmd() {
 
 function _hyper_content_timing() {
   if [ -n "$HYPER_CONTENT_TIMING" ]; then
-    echo "%{$fg[yellow]%}(${HYPER_CONTENT_TIMING} ms)%{$reset_color%} "
+    echo "%{$fg[yellow]%}(${HYPER_CONTENT_TIMING} s)%{$reset_color%} "
   fi
 }
 

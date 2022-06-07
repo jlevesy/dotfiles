@@ -1,3 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 export TERMINAL=termite
 export BROWSER=firefox
 export SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/ssh-agent.socket

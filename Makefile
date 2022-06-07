@@ -1,5 +1,3 @@
-OHMYZSH="/usr/share/oh-my-zsh"
-
 all: dotfiles
 
 # dotfiles deploys dotfiles to the curent user home directory
@@ -12,4 +10,4 @@ dotfiles:
 .PHONY: zsh-themes
 zsh-themes:
 	@echo "==> Copying oh-my-zsh themes"
-	@sudo cp ./zsh-themes/* "$(OHMYZSH)/themes/"
+	@sudo cp ./zsh-themes/* "$(ZSH)/themes/"

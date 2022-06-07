@@ -1,7 +1,7 @@
 [user]
   name = Julien Levesy
   email = jlevesy@gmail.com
-  signingkey = EA231E6082844641
+  signingkey = D67C067774A2F3A7
 [gpg]
   prograpm = gpg2
 [ui]
@@ -20,8 +20,6 @@
   lineNumber = true
 [commit]
   gpgsign = true
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
 [alias]
   st = status
   ci = commit
