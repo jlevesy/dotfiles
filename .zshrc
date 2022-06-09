@@ -33,9 +33,8 @@ alias vim=nvim
 alias sl=ls
 alias b="gh repo view --web"
 alias tree="ls --tree -A --blocks name"
-alias open="xdg-open"
 alias ip='ip --color'
-  alias ipb='ip --color --brief'
+alias ipb='ip --color --brief'
 alias ls='lsd -a1l'
 alias cat=bat
 
