@@ -10,6 +10,7 @@ export GPG_TTY=$(tty)
 export GOPATH=$HOME/Code
 export GOBIN=$GOPATH/bin
 export GO111MODULES=on
+export SSH_AUTH_SOCK=/Users/jlevesy/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
 # export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
