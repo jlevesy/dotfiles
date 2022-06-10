@@ -37,6 +37,7 @@ alias ip='ip --color'
 alias ipb='ip --color --brief'
 alias ls='lsd -a1l'
 alias cat=bat
+alias firefox='/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox'
 
 if [ -e ~/.specific.zshrc ]; then
   source ~/.specific.zshrc
