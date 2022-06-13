@@ -13,12 +13,16 @@ export GO111MODULES=on
 export SSH_AUTH_SOCK=/Users/jlevesy/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
 # export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 export npm_config_prefix=~/.node_modules
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.node_modules/bin:$PATH"
+export PATH="/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH"
+export PATH="$HOME/.krew/bin:$PATH"
 export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 

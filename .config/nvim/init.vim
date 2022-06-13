@@ -38,6 +38,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
