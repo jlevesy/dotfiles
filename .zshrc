@@ -46,3 +46,4 @@ alias firefox='/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/fire
 if [ -e ~/.specific.zshrc ]; then
   source ~/.specific.zshrc
 fi
+eval "$(zellij setup --generate-auto-start zsh)"
