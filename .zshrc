@@ -1,4 +1,4 @@
-export ZSH=/Users/jlevesy/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 ZSH_THEME="hypercontent"
 plugins=(git brew docker golang kubectl aws)
 
@@ -27,8 +27,7 @@ export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [[ -r "/Users/jlevesy/.bin/z.sh" ]] && source /Users/jlevesy/.bin/z.sh
 
