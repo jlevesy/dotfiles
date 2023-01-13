@@ -66,7 +66,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " FZF shortcuts
-nmap <c-p> :Files<CR>
+nmap <Leader>p :Files<CR>
 nmap ; :Buffers<CR>
 nmap <Leader>f :Ag<space><c-r>=expand("<cword>")<cr><CR>
 
