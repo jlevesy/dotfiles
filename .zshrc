@@ -46,4 +46,7 @@ alias firefox='/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/fire
 if [ -e ~/.specific.zshrc ]; then
   source ~/.specific.zshrc
 fi
+# Auto attach, do not have one session per terminal.
+export ZELLIJ_SESSION_NAME="main"
+export ZELLIJ_AUTO_ATTACH="true"
 eval "$(zellij setup --generate-auto-start zsh)"
