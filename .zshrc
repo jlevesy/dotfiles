@@ -50,3 +50,5 @@ fi
 export ZELLIJ_SESSION_NAME="main"
 export ZELLIJ_AUTO_ATTACH="true"
 eval "$(zellij setup --generate-auto-start zsh)"
+
+eval "$(rbenv init - zsh)"
